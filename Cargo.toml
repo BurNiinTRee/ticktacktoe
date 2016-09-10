@@ -1,0 +1,6 @@
+[package]
+name = "ticktacktoe"
+version = "0.1.0"
+authors = ["Lars Muehmel <larsmuehmel@web.de>"]
+
+[dependencies]
