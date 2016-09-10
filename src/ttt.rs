@@ -62,11 +62,11 @@ impl Ttt {
         let stdin = io::stdin();
         let mut stdin = stdin.lock();
         if stdin.read_line(&mut buffer).is_ok(){
-            let numres = buffer.trim().parse::<usize>();
-            if let Ok(num) = numres {
+            if let Ok(num) = buffer.trim().parse::<usize>() {
                 return (player, num)
             }
         }
+        drop(stdin);
         return self.read_input(player);
     }
     pub fn is_won(&self) -> Field {
